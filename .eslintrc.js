@@ -44,6 +44,18 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', {
       optionalDependencies: ['test/unit/index.js']
     }],
+    'no-console': 0,
+    'no-debugger': 0,
+    'import/no-extraneous-dependencies': 0,
+    'import/no-unresolved': 0,
+    'no-use-before-define': 0,
+    'no-useless-escape': 0,
+    'no-undef': 0,
+    'no-prototype-builtins': 0,
+    'no-lonely-if': 0,
+    'no-extend-native': 0,
+    'consistent-return': 0,
+    'no-useless-return': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
