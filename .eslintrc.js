@@ -44,6 +44,26 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', {
       optionalDependencies: ['test/unit/index.js']
     }],
+    "no-underscore-dangle": [
+      "error", 
+      { "allow": ["_d", "_date"] }
+    ],
+    'no-param-reassign': 'off', // 允许修改函数引用类型入参
+    'no-plusplus': 'off', // 允许 ++
+    'class-methods-use-this': 'off',
+    'no-restricted-syntax': [ // 覆盖掉对 for-in 和 for-of 的限制
+        'error',
+        'LabeledStatement',
+        'WithStatement',
+    ],
+    "no-shadow": [
+        "error",
+        { 
+            "allow":
+            ["state"] 
+        }
+    ],
+    'import/extensions': ['off', 'never'],
     'no-console': 0,
     'no-debugger': 0,
     'import/no-extraneous-dependencies': 0,
