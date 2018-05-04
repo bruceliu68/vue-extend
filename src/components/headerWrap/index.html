@@ -1,0 +1,18 @@
+<div class="m-header">
+    <img class="logo" src="../../assets/logo.png"/>
+    <span class="s1">易数电商</span>
+    <el-menu :default-active="activeIndex"
+            class="el-menu-demo" background-color="#F5A623" text-color="#fff" active-text-color="#fff"
+            mode="horizontal"
+            @select="handleSelect" router>
+        <el-menu-item index="1" disabled>首页</el-menu-item>
+        <el-menu-item index="tool">易数工具</el-menu-item>
+        <el-menu-item index="3" disabled>易数学堂</el-menu-item>
+        <el-menu-item index="4" disabled>使用帮助</el-menu-item>
+        <el-menu-item index="5" disabled>关于我们</el-menu-item>
+    </el-menu>
+    <div class="login">
+        <a @click="resetActiveIndex">登录</a>
+        <a @click="resetActiveIndex">注册</a>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="m-login">
+    <el-steps :active="active" align-center finish-status="success" :space="300">
+        <el-step title="登录易数账号"></el-step>
+        <el-step title="登录淘宝账号"></el-step>
+    </el-steps>
+    <div v-if="active === 0" class="wrapBox">
+        <div class="box">
+            <label><b>*</b>会员名：</label>
+            <el-input v-model="vipName" size="medium" placeholder="请输入您注册的易数电商会员名"></el-input>
+        </div>
+        <div class="box">
+            <label><b>*</b>密码：</label>
+            <el-input v-model="vipPwd" size="medium" placeholder="请输入密码，8~12位"></el-input>
+        </div>
+        <div class="tip">注意：如果忘记密码，请联系易数电商客服处理</div>
+        <div class="text-center">
+            <el-button size="medium" type="primary" @click="ysLogin">登 录</el-button>
+            <el-button size="medium">取 消</el-button>
+        </div>
+    </div>
+    <div v-else class="wrapBox">
+        <div class="box">
+            <label><b>*</b>登录名：</label>
+            <el-input v-model="tName" size="medium" placeholder="手机号/会员名/邮箱"></el-input>
+        </div>
+        <div class="box">
+            <label><b>*</b>登录密码：</label>
+            <el-input v-model="tPwd" size="medium" placeholder=""></el-input>
+        </div>
+        <div class="text-center">
+            <el-button size="medium" type="primary" @click="tbLogin">登 录</el-button>
+            <el-button size="medium">取 消</el-button>
+        </div>
+    </div>
+    <!-- <el-button @click="getTaoBaoCookie">获取淘宝cookie</el-button> -->
+</div>

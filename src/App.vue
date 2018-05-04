@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <router-view/>
+    <el-container>
+      <el-header style="height:50px;"><headerWrap></headerWrap></el-header>
+      <el-main><router-view/></el-main>
+    </el-container>
   </div>
 </template>
 
 <script>
+import headerWrap from './components/headerWrap';
+
 export default {
   name: 'App',
+  components: {
+    headerWrap,
+  },
 };
 </script>
-<style>
-</style>
+<style lang="less" src="./assets/common.less"></style>
