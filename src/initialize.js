@@ -68,7 +68,8 @@ import {
 } from 'element-ui';
 import './utils/filter'; // 过滤器
 import * as utils from './utils/helper';
-// import axios from './axios';
+import axios from './axios';
+import api from './api';
 
 Vue.use(Pagination);
 Vue.use(Dialog);
@@ -148,4 +149,5 @@ Vue.prototype.$notify = (msg, type, title, duration) => {
 };
 Vue.prototype.$message = Message;
 Vue.prototype.$utils = utils;
-// Vue.prototype.$axios = axios;
+Vue.prototype.$axios = axios;
+Vue.prototype.$api = api;
